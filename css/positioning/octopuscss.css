@@ -1,13 +1,21 @@
+
+.container {
+
+}
+
 .octo {	
 	position: relative;
 	z-index: -1;
-	margin-top: 125px;
-	margin-left: 50px;
+	margin: auto;
+	width: 200px;
+	display: block;
+	margin-top: 100px;
 }
 
 .hat {
 	position: absolute;
-	left: 50px;
+	top: 10px;
+	
 }
 
 .glass {
