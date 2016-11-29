@@ -1,10 +1,17 @@
 .octo {	
+	position: relative;
+	z-index: -1;
+	margin-top: 125px;
+	margin-left: 50px;
 }
 
 .hat {
-
+	position: absolute;
+	left: 50px;
 }
 
 .glass {
-	
+	position: absolute;
+	top: 233px;
+	left: 100px;
 }
