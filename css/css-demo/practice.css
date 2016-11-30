@@ -12,3 +12,13 @@
 .class{
 	font-size: .8em;
 }
+
+.job {
+	background-color: red;
+}
+.job:hover {
+	color: blue;
+}
+li:first-child {
+	color: orange;
+}
