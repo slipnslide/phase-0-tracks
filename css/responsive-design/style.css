@@ -1,13 +1,10 @@
-body{
-  max-width: 960px;
-  min-width: 427px;
-  text-align: center;
-}
+
 
 #page-wrap {
   margin: auto;
   width: 960px;
 }
+
  
 #external-links {
   width: 10%;
@@ -15,9 +12,16 @@ body{
   vertical-align: top;
 }
 
-main {
+body{
+  max-width: 960px;
+  min-width: 427px;
+  text-align: center;
+}
+.main {
   width: 70%;
   display: inline-block;
+}
+
 }
 
 blockquote {
@@ -51,6 +55,9 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+ol {
+  list-style-type: none;
 }
 
 @media screen and (max-width: 427px) {
