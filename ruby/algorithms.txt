@@ -15,6 +15,18 @@ x = gets.chomp
   -- until current_floor = desired_floor
 
 
+#attempt 3
+
+
+-Determine what floor you are on current_floor
+ - Search Floors by key words to decide what floor to go to desired_floor
+ - Decide if you have to go up or down + -
+ - determine shortest path to floor
+ - Call elevator
+ - press button for shortest_path to floor
+-End
+
+
 -----Starting your day-----
 
 - wake up
