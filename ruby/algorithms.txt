@@ -1,0 +1,24 @@
+- Decide if you move up or down
+ - Call elevator
+ - Floor elevator was called equals starting point
+ - Choose a desired floor
+- Press button of floor 
+
+
+- Decide if you move up or down
+puts "what floor would you like to go to?"
+x = gets.chomp
+  - desired_floor = "#{x}"
+  - Call elevator
+  - current_floor is starting point
+  - If going up press current_floor + 1 else press current_floor = 1
+  -- until current_floor = desired_floor
+
+
+-----Starting your day-----
+
+- wake up
+ - see what needs to be done
+ - choose something to do
+ - Go do it
+- Repeat until tired of doing stuff
