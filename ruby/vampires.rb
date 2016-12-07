@@ -10,4 +10,8 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you?" 
 bread = gets.chomp
 puts "Would you like to enroll in the company’s health insurance?"(y/n)
 insurance = gets.chomp
+wolves_like_sunshine = true
+wolves_like_garlic = true
+vampires_like_sunshine = false
+vampires_like_garlic = false
 if age != yearsold
