@@ -1,30 +1,22 @@
-- Decide if you move up or down
- - Call elevator
- - Floor elevator was called equals starting point
- - Choose a desired floor
-- Press button of floor 
 
+-Search Directory of building for where you need to go
+ "Assuming 2030 everything is online"
+ -Otherwise walk to building directory
+  -Determine where in the building what you are looking for is located destination_floor
+ -Determine if desstination_floor is located up or down from your current_floor
+ -Walk to elevator
+  -If elevator is working and not crowded press call button
+  else take stairs
+   -if current_floor > destination_floor press down
+    else press up
+ - Wait for elevator doors to open
+  - Walk in elevator
+   - Walk to elevator "Floor Panel"
+    - Select Floor you need to go to
+     = Wait for doors to close and elevator to move
+ -Wait for elevator doors to open
+  - Until current_floor equals destination_floor don't move else exit elevator
 
-- Decide if you move up or down
-puts "what floor would you like to go to?"
-x = gets.chomp
-  - desired_floor = "#{x}"
-  - Call elevator
-  - current_floor is starting point
-  - If going up press current_floor + 1 else press current_floor = 1
-  -- until current_floor = desired_floor
-
-
-#attempt 3
-
-
--Determine what floor you are on current_floor
- - Search Floors by key words to decide what floor to go to desired_floor
- - Decide if you have to go up or down + -
- - determine shortest path to floor
- - Call elevator
- - press button for shortest_path to floor
--End
 
 
 -----Starting your day-----
