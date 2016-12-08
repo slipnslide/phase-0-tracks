@@ -43,11 +43,21 @@ until x == 0
   else
     puts "you broke it start over"
   end
-
-
+y = "done"
+answer = ""
+while answer != y
+puts "Do you have any alergies? if so list them one at a time. Type done when you are finished"
+  answer = gets.chomp
+  if answer == 'sunshine'
+   puts "Probably a vampire"
+   break
+  
+  end
+  
+end
 
    if "#{yearsold}" == "#{age}" && ("#{bread}" && "#{insurance}")
-	 puts "Probably not a vampire."
+	   puts "Probably not a vampire."
   	elsif ("#{yearsold}" == "#{age}" && "#{bread}") || "#{insurance}"
 	   puts "Probably a vampire."
 	  elsif ("#{yearsold}" == "#{age}" && "#{insurance}") || "#{bread}"
@@ -65,8 +75,6 @@ until x == 0
 	end
 	x -= 1
 end
-puts "All done!"
-
 
 
 	
