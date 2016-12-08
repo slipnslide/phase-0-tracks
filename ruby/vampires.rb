@@ -75,6 +75,8 @@ end
 	end
 	x -= 1
 end
+prints "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+abort("Were outta here")
 
 
 	
