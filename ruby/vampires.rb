@@ -16,26 +16,47 @@ yearsold = current_year - year.to_i
 puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)?"
 bread = gets.chomp
 
+if bread == "y"
+ bread = true
+  
+elsif bread == "n"
+  bread = false
+  
+else
+  puts "you broke it start over"
+end
 
 puts "Would you like to enroll in the company’s health insurance? (y/n)?"
 insurance = gets.chomp
 
+if insurance == "y"
+   insurance = true
+  
+elsif insurance == "n"
+   insurance = false
+  
+else
+  puts "you broke it start over"
+end
 
 
 
- if "#{age}" == "#{yearsold}" && "#{bread}" == "y" && "#{insurance}" == "n"
+ if "#{yearsold}" == "#{age}" && ("#{bread}" && "#{insurance}")
 	 puts "Probably not a vampire."
-	elsif "#{age}" != "#{yearsold}" && ("#{bread}" == "y" || "#{insurance}" == "n")
+	elsif ("#{yearsold}" == "#{age}" && "#{bread}") && "#{insurance}"
 	 puts "Probably a vampire."
-	elsif "#{age}" != "#{yearsold}" && ("#{bread}" == "n" || "#{insurance}" == "y")
+	elsif ("#{yearsold}" == "#{age}" && "#{insurance}") && "#{bread}"
 	 puts "Probably a vampire."
-	elsif "#{age}" != "#{yearsold}" && ("#{bread}" == "n" && "#{insurance}" == "n")
+	elsif "#{yearsold}" != "#{age}" && ("#{bread}" || "#{insurance}")
+	 puts "Probably a vampire."
+	elsif "#{yearsold}" != "#{age}" && ("#{bread}"  && "#{insurance}")
 	 puts "Almost certainly a vampire."
-	elsif "#{name}" == "Drake Cula ; Tu Fang" && !("#{age}" != "#{yearsold}" && "#{bread}" == "n" && "#{insurance}" == "n")
+	elsif "#{name}" == "Drake Cula ; Tu Fang" && !("#{yearsold}" != "#{age}" && "#{bread}" && "#{insurance}")
 		puts "definitely a vampire"
 	else
 		puts "Results Inconclusive"
 		
+	
 	end
 
 
