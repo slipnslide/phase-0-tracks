@@ -13,18 +13,19 @@ insurance = gets.chomp
 
 
 
-if "#{age} == #{yearsold}" and "#{bread} == y" and "#{insurance} == y"
+ if "#{age}" == "#{yearsold}" && "#{bread}" == y && "#{insurance}" == y
 	 puts "Probably not a vampire."
-	elsif "#{age} != #{yearsold}" and "#{bread} == n" or "#{insurance} == n"
+	elsif "#{age}" != "#{yearsold}" && ("#{bread}" == n || "#{insurance}" == n)
 	 puts "Probably a vampire."
-	elsif "#{age} != #{yearsold}" and "#{bread} == n" and "#{insurance} == n"
+	elsif "#{age}" != "#{yearsold}" && ("#{bread}" == y || "#{insurance}" == y)
 	 puts "Almost certainly a vampire."
-	elsif "#{name} == Drake Cula ; Tu Fang" "#{age} == #{yearsold}" and "#{bread} == y" and "#{insurance} == y"
+	elsif "#{name}" == "Drake Cula ; Tu Fang" && !("#{age}" != "#{yearsold}" && "#{bread}" == n && "#{insurance}" == n)
 		puts "definitely a vampire"
 	else
 		puts "Results Inconclusive"
 		
-end
+	end
+
 
 
 
