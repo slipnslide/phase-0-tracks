@@ -14,13 +14,13 @@ color = gets.chomp
 puts "Is your hamster a good candidate for adoption (y/n)"
 
 	adoption = gets.chomp
-  if adoption == "y"
+if adoption == "y"
 	adoption = true
   elsif adoption == "n"
 	adoption = false
   else
 	adoption = nil
- end
+end
 
 
 
