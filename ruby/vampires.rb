@@ -1,10 +1,21 @@
 puts "How many employees will be processed today?"
- x = gets.chomp.to_i
- until x == 0
+x = gets.chomp.to_i
+until x == 0
 
 
   puts "What is your name?"
   name = gets.chomp
+  if name == "Drake Cula"
+    name = false
+    p name
+  elsif name == "Tu Fang"
+    name = false
+    p name
+  else
+    name = true
+    p name
+  end
+  
 
   puts "How old are you?"
   age = gets.chomp
@@ -16,6 +27,13 @@ puts "How many employees will be processed today?"
 
   current_year = 2016
   yearsold = current_year - year.to_i
+  if "#{yearsold}" == "#{age}"
+  yearsold = true
+  
+  else
+    yearsold = false
+    
+  end
 
 
   puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)?"
@@ -24,10 +42,10 @@ puts "How many employees will be processed today?"
   if bread == "y"
    bread = true
   
-    elsif bread == "n"
+  elsif bread == "n"
    bread = false
   
-    else
+  else
     puts "you broke it start over"
   end
 
@@ -37,10 +55,10 @@ puts "How many employees will be processed today?"
   if insurance == "y"
    insurance = true
   
-    elsif insurance == "n"
+  elsif insurance == "n"
    insurance = false
   
-    else
+  else
     puts "you broke it start over"
   end
 y = "done"
@@ -53,31 +71,28 @@ puts "Do you have any alergies? if so list them one at a time. Type done when yo
    break
   
   end
-  
 end
 
-    if "#{yearsold}" == "#{age}" && ("#{bread}" && "#{insurance}")
-	    puts "Probably not a vampire."
-  	  elsif ("#{yearsold}" == "#{age}" && "#{bread}") || "#{insurance}"
-	   puts "Probably a vampire."
-	  elsif ("#{yearsold}" == "#{age}" && "#{insurance}") || "#{bread}"
-	   puts "Probably a vampire."
-	  elsif ("#{yearsold}" != "#{age}" && "#{bread}") || "#{insurance}"
-	   puts "Probably a vampire."
-  	  elsif ("#{yearsold}" != "#{age}" && "#{insurance}") || "#{bread}"
-	   puts "Probably a vampire."
-      elsif "#{yearsold}" != "#{age}" && ("#{bread}"  && "#{insurance}")
-	   puts "Almost certainly a vampire."
-	  elsif "#{name}" == ("Drake Cula" || "Tu Fang") && ("#{yearsold}" == "#{age}" && "#{bread}" && "#{insurance}")
-	  	puts "definitely a vampire"
-  	  else
-	  	puts "Results Inconclusive"
-	end
-	x -= 1
+
+case
+when
+yearsold == true && bread == true && insurance == true
+then puts "Probably not a vampire"
+when yearsold == false && (bread == true && insurance == false)
+then puts "Probs a vampire"
+when yearsold == false && (bread == false && insurance == true)
+then puts "Probs a vampire"
+when name == false && yearsold == false && bread == false && insurance == false
+then puts "Def a vamp"
+when yearsold == false && bread == false && insurance == false 
+then puts "Almost certainly a vampire"
+
 end
-prints "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
+  x -= 1
+end
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 abort("Were outta here")
-
 
 	
 
