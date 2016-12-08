@@ -1,6 +1,6 @@
 puts "How many employees will be processed today?"
-x = gets.chomp.to_i
-until x == 0
+ x = gets.chomp.to_i
+ until x == 0
 
 
   puts "What is your name?"
@@ -24,10 +24,10 @@ until x == 0
   if bread == "y"
    bread = true
   
-  elsif bread == "n"
+    elsif bread == "n"
    bread = false
   
-  else
+    else
     puts "you broke it start over"
   end
 
@@ -37,10 +37,10 @@ until x == 0
   if insurance == "y"
    insurance = true
   
-  elsif insurance == "n"
+    elsif insurance == "n"
    insurance = false
   
-  else
+    else
     puts "you broke it start over"
   end
 y = "done"
@@ -56,21 +56,21 @@ puts "Do you have any alergies? if so list them one at a time. Type done when yo
   
 end
 
-   if "#{yearsold}" == "#{age}" && ("#{bread}" && "#{insurance}")
-	   puts "Probably not a vampire."
-  	elsif ("#{yearsold}" == "#{age}" && "#{bread}") || "#{insurance}"
+    if "#{yearsold}" == "#{age}" && ("#{bread}" && "#{insurance}")
+	    puts "Probably not a vampire."
+  	  elsif ("#{yearsold}" == "#{age}" && "#{bread}") || "#{insurance}"
 	   puts "Probably a vampire."
 	  elsif ("#{yearsold}" == "#{age}" && "#{insurance}") || "#{bread}"
 	   puts "Probably a vampire."
 	  elsif ("#{yearsold}" != "#{age}" && "#{bread}") || "#{insurance}"
 	   puts "Probably a vampire."
-  	elsif ("#{yearsold}" != "#{age}" && "#{insurance}") || "#{bread}"
+  	  elsif ("#{yearsold}" != "#{age}" && "#{insurance}") || "#{bread}"
 	   puts "Probably a vampire."
-    elsif "#{yearsold}" != "#{age}" && ("#{bread}"  && "#{insurance}")
+      elsif "#{yearsold}" != "#{age}" && ("#{bread}"  && "#{insurance}")
 	   puts "Almost certainly a vampire."
 	  elsif "#{name}" == ("Drake Cula" || "Tu Fang") && ("#{yearsold}" == "#{age}" && "#{bread}" && "#{insurance}")
 	  	puts "definitely a vampire"
-  	else
+  	  else
 	  	puts "Results Inconclusive"
 	end
 	x -= 1
