@@ -1,3 +1,14 @@
+#write encrypt method for every letter of the string
+#Find the length of the word
+#Loop through every letter in the string and increment by 1
+#Return the result
+
+#Ask the user whether they want to encrypt or decrypt something
+#Ask the user for a password to either decrypt or encrypt
+#Decrypt/encrypt password and return the result to the user
+
+
+
 def encrypt(string)
  counter = 0
  while counter < string.length
@@ -14,7 +25,13 @@ def encrypt(string)
  end
    return string
 end
-
+#Write decrypt method that reverses the letter of the string in the alphabet
+#Create a variable called alphabet that stores the alphabet
+#Create a counter
+#Create a while loop that goes through each letter of the string
+  #Find the index in alphabet and subtract 1 from that index
+  #Replace letter with one before
+#Return final value
 def decrypt(string)
  alphabet = "abcdefghijklmnopqrstuvwxyz"
  counter = 0
