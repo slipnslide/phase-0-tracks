@@ -41,12 +41,12 @@ if answer == 'encrypt'
  puts 'please give me the password to encrypt.'
  password_en = gets.chomp
  result = encrypt(password_en)
- puts "Your encrypted password is is #{result}"
+ puts "Your encrypted password is #{result}"
 elsif answer == 'decrypt'
  puts "please give me the password to decrypt."
  password_de = gets.chomp
  result = decrypt(password_de)
- puts "Your decrypted password  is #{result}"
+ puts "Your decrypted password is #{result}"
 else
  puts 'wrong input try again'
 end
