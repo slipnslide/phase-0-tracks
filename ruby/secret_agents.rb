@@ -10,7 +10,7 @@ def encrypt(string)
    else
      string[counter] = string[counter].next
    end
-     counter = counter + 1
+     counter += 1
  end
    return string
 end
@@ -28,7 +28,7 @@ def decrypt(string)
 
    end
 
-   counter = counter + 1
+   counter += 1
 
  end
  return string
