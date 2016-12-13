@@ -44,18 +44,13 @@ p number_array
 p new_number_array
 
 
-#1. hash 
-#NONE OF THIS CODE WORKS HOW IT SHOULD
+#1. hash deletes any number less than or equal to 4
 
 number_hash = {1 => "one", 2 => "two", 3 => "three", 4 => "four", 5 => "five", 6 => "six"}
-
-number_hash.each do |number, word|
-if number < 4
-  puts 
-else
-  puts "#{number} #{word}"
-end
-end
+p number_hash
+number_hash.each { |number| puts number}
+number_hash.delete_if { |number| number <= 4 }
+p number_hash
 
 
 # filters a structure and keeps data that meets a certain criteria
