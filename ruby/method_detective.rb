@@ -5,35 +5,41 @@
 # committed the crime, add additional calls to prove it.
 
  "iNvEsTiGaTiOn".swapcase 
- => “InVeStIgAtIoN”
+# => “InVeStIgAtIoN”
 
  "zom".insert(1, "o")
- => “zoom”
+ #=> “zoom”
 
  "enhance".center(16)
- => "    enhance    "
+ #=> "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
-# => "STOP! YOU’RE UNDER ARREST!"
+ "Stop! You’re under arrest!".upcase
+#=> "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+ "the usual".insert(-1, " suspects")
 #=> "the usual suspects"
 
-# " suspects".<???>
+" suspects".prepend("the usual")
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".<???>
-# => "The case of the disappearing last lette"
+ "The case of the disappearing last letter".chop
+ #=> "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
-# => "he mystery of the missing first letter"
+"The mystery of the missing first letter".delete "T"
+#=> "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+ "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
-# => 122 
-# (What is the significance of the number 122 in relation to the character z?)
+ "z".bytes.join
+ #=> 122 
 
-# "How many times does the letter 'a' appear in this string?".<???>
+
+ # .bytes Returns an array of bytes in str. This is a shorthand for str.each_byte.to_a
+# .join allows us to convert the element of the array to a string and since there is no defined string it uses an empty one to print the data
+
+# (What is the significance of the number 122 in relation to the character z?)
+#according to the ASCII code "American Standard Code for Information Interchange z = 122 if you hold alt and press 122 you get a lowercase z"
+
+ "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
