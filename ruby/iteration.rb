@@ -61,7 +61,7 @@ letter_array.map! do |letter|
   if letter < "e"
     letter
   else
-    nil
+    
   end
 end
 
