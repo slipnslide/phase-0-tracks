@@ -34,10 +34,6 @@ p "Elementary,    my   dear        Watson!".squeeze(" ")
 p "z".ord
  #=> 122 
 
-
- # .bytes Returns an array of bytes in str. This is a shorthand for str.each_byte.to_a
-# .join allows us to convert the element of the array to a string and since there is no defined string it uses an empty one to print the data
-
 # (What is the significance of the number 122 in relation to the character z?)
 #according to the ASCII code "American Standard Code for Information Interchange z = 122 if you hold alt and press 122 you get a lowercase z"
 
