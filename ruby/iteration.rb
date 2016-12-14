@@ -28,20 +28,11 @@ end
 
 #1. array: delete numbers in array greater than 5
 number_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-new_number_array = []
 
 p number_array
-p new_number_array
-new_number_array = number_array.map do |number| 
-  if number > 5
-    nil
-  else 
-    number
-  end 
-end 
+number_array.delete_if { |number| number < 5}
 
 p number_array
-p new_number_array
 
 
 #1. hash 
@@ -49,42 +40,60 @@ p new_number_array
 
 number_hash = {1 => "one", 2 => "two", 3 => "three", 4 => "four", 5 => "five", 6 => "six"}
 p number_hash
-new_number_hash = {}
-p new_number_hash
-
-number_hash.each do |number, word|
-  if number > 4
-    new_number_hash << number_hash 
-  else
-    new_number_hash = nil
-  end 
-end 
-
+number_hash.each { |number| puts number}
+number_hash.delete_if { |number| number <= 4 }
 p number_hash
-p new_number_hash
 
 
-# filters a structure and keeps data that meets a certain criteria
+# 2.  array 
 letter_array = ["a", "b", "c", "d", "e", "f", "g"]
+p letter_array
+letter_array.keep_if { |letter| letter < "e"}
 
 p letter_array
-letter_array.map! do |letter|
-  if letter < "e"
-    letter
-  else
-    nil
-  end
-end
 
-p letter_array
+# 2. hash. 
+
+number_hash = {1 => "one", 2 => "two", 3 => "three", 4 => "four", 5 => "five", 6 => "six"}
+p number_hash
+number_hash.keep_if { |number| number <= 4 }
+p number_hash
+
+# 3. array
 
 # filter a structure for data satisfying a certain condition
 # using a different method than above
 
 word_array = ["Colossus", "Satisfying", "box", "Humble", "modest", "coding", "lay"]
 p word_array
-word_array.each { |word| puts word}
 
-word_array.delete_if { |word| word.length >= 6 }
+word_array.include?("box")
 
 p word_array
+
+# 3. hash
+
+number_hash = {1 => "one", 2 => "two", 3 => "three", 4 => "four", 5 => "five", 6 => "six"}
+p number_hash
+
+number_hash.reject! { |key| key < 3 }
+
+p number_hash
+
+# 4. array. 
+
+word_array = ["Colossus", "Satisfying", "box", "Humble", "modest", "coding", "lay"]
+p word_array
+new_word_array = []
+
+new_word_array = word_array.drop_while { |word| word != "box"}
+p new_word_array
+p word_array
+
+# 4. hash. 
+
+number_hash = {1 => "one", 2 => "two", 3 => "three", 4 => "four", 5 => "five", 6 => "six"}
+p number_hash
+
+p number_hash.has_key?(1)
+
