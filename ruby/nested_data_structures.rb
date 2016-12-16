@@ -5,7 +5,7 @@ Hotel_Madness = {
 			owner: Billy the kid,
 
 			},
-			service: [
+		service: [
 				"open bar"
 				"room cleaning"
 				"clothes washed"
@@ -19,7 +19,7 @@ Hotel_Madness = {
 			guest2: Family,
 			guest3: kids partying,
 			},
-			type_of_service: [
+		type_of_service: [
 				"room cleaning"
 				"food"
 				"bags carried"
@@ -31,7 +31,7 @@ Hotel_Madness = {
 				doorman: Roger,
 				bag_boy: Sammy,
 			},
-			jobs: [
+		jobs: [
 				"Greeters"
 				"Doormen"
 				"Bag Carrier"
