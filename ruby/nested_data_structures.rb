@@ -56,3 +56,8 @@ Hotel_Madness = {
 	}
 }
 p Hotel_Madness[:bottom_floor][:jobs].last
+p Hotel_Madness[:top_floor][:vip][:rich_guy]
+p Hotel_Madness[:basement][:staff][:maid]
+p Hotel_Madness[:basement][:jobs][0]
+p Hotel_Madness[:top_floor][:service].first
+p Hotel_Madness[:middle_floor][:average_guest].values
