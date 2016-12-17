@@ -35,7 +35,7 @@ calc_str = str.split(%r{\s*})
   string_counter += 1
 end
 
-puts " #{string_counter} calculations preformed"
+puts "#{string_counter} calculations preformed:"
 new_hash.each {|str, calculate| puts "#{str} = #{calculate}"}
 
 
