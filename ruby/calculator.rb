@@ -18,13 +18,26 @@ end
 
 #USER INPUT
 puts "What calculation would you like to preform?? ex: 4+5"
-str = gets.chomp.split("")
-p str
-first = str[0].to_i
-second = str[2].to_i
-symbol = str[1].to_sym
+str = gets.chomp
+calc_str = str.split("")
+new_hash = {}
+string_counter = 0
+# p str
+while str != "done"
+	first = calc_str[0].to_i
+	second = calc_str[2].to_i
+	symbol = calc_str[1].to_sym
+p calculate(first, symbol, second)
+new_hash.store(str, calculate(first, symbol, second))
+puts "What else would you like to calculate? Type done to end"
+str = gets.chomp
+calc_str = str.split("")
+  string_counter += 1
+end
+puts " #{string_counter} calculations preformed"
+new_hash.each {|str, calculate| puts "#{str} = #{calculate}"}
 
-calculate(first, symbol, second)
+
 
 
 
