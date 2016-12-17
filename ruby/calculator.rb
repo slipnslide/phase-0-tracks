@@ -17,9 +17,9 @@ end
 
 
 #USER INPUT
-puts "What calculation would you like to preform?? ex: 4+5"
+puts "What calculation would you like to preform?? ex: 4 + 5"
 str = gets.chomp
-calc_str = str.split("")
+calc_str = str.split(%r{\s*})
 new_hash = {}
 string_counter = 0
 # p str
@@ -31,9 +31,10 @@ p calculate(first, symbol, second)
 new_hash.store(str, calculate(first, symbol, second))
 puts "What else would you like to calculate? Type done to end"
 str = gets.chomp
-calc_str = str.split("")
+calc_str = str.split(%r{\s*})
   string_counter += 1
 end
+
 puts " #{string_counter} calculations preformed"
 new_hash.each {|str, calculate| puts "#{str} = #{calculate}"}
 
