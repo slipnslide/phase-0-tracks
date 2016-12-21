@@ -13,3 +13,7 @@
 #Lovable
 #Cuddle
 #Nibble
+
+
+#Instance methods
+#Class Methods
