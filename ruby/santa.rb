@@ -1,5 +1,3 @@
-
-
 class Santa
 	#getter and setter methods refactored
 	attr_reader :ethnicity
@@ -42,8 +40,9 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 100.times do 
 #found .sample in ruby doc which allows an element to be chosen randomly from an array
   santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+  #randomly select an age 0-140
   santa.age= (rand(140))
-  #to put santa back into an array
+  #If you want to shovel santa back into an array
   #santas << santa
   p santa
 end
@@ -55,6 +54,15 @@ end
 #santa1.eat_milk_and_cookies("snickerdoodler")
 #santa2 = Santa.new
 #santa2.eat_milk_and_cookies("chocolate")
+
+#test code
+#santa3 = Santa.new("gender fluid", "Mystical Creature (unicorn)")
+#santa3.get_mad_at("Vixen")
+#santa3.celebrate_birthday
+#santa3.gender = "agender"
+#p santa3.age
+#p santa3.ethnicity
+#p santa3
 
 #old getter and setter methods
 
