@@ -15,38 +15,38 @@
 
 require_relative 'guessing_game'
 
-describe Guess_fun do 
-	let(:new_game) {Guess_fun.new("word")}
+describe GuessFun do 
+	let(:game) { GuessFun.new("hangman") }
 	it "checks how many letters are in word and times by 2" do
-		expect(new_game.guesses).to eq 8
+		expect(game.guesses).to eq 14
 	end
 
 	it "Splits the letters of word into an array" do
-		expect(new_game.word[3]).to eq "d"
+		expect(game.word[3]).to eq "g"
 	end
 
 	it "Prints underscores for every letter in the array" do
-		expect(new_game.underscore).to eq "_ _ _ _"
+		expect(game.underscore).to eq "_ _ _ _ _ _ _"
 	end
 
 	it "Subtracts a guessed number from guesses" do
-		new_game.guess_a_letter("w")
-		expect(new_game.guesses).to eq 7
+		game.guess_a_letter("m")
+		expect(game.guesses).to eq 13
 	end
 
 	it "Adds any guessed letter to guess list" do
-		new_game.guess_a_letter("w")
-		expect(new_game.guessed_array).to eq ["w"]
+		game.guess_a_letter("m")
+		expect(game.guessed_array).to eq ["m"]
 	end
 
 	it "Deletes any underscore of a guessed letter and replaces it with the letter" do
-		new_game.guess_a_letter("w")
-		expect(new_game.underscore).to eq "w _ _ _"
+		game.guess_a_letter("g")
+		expect(game.underscore).to eq "_ _ _ g _ _ _"
 	end
 
 	it "Takes any letter already guessed and doesn't count it" do
-		new_game.guess_a_letter("w")
-		new_game.guess_a_letter("w")
-		expect(new_game.guesses).to eq 7
+		game.guess_a_letter("m")
+		game.guess_a_letter("m")
+		expect(game.guesses).to eq 13
 	end
 end
