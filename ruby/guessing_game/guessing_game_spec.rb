@@ -13,6 +13,11 @@
 #p "______" "word length in underscores" with guessed letters inserted after every guess
 #Message when they win or lose
 
+require_relative 'guessing_game'
 
-
-describe 
+describe Guess_fun do 
+	let(:new_game) {Guess_fun.new("word")}
+	it "checks how many letters are in word and times by 2" do
+		expect(new_game.guesses).to eq 8
+	end
+	
