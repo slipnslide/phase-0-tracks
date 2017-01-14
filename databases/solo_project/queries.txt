@@ -1,0 +1,51 @@
+sqlite> SELECT * FROM rbg_info
+   ...> ;
+1|Slipnslide|1|1
+2|Scott|1|4
+3|Blake|1|5
+4|Rachy|4|5
+5|Gengar|2|1
+6|Jani|3|6
+7|Pluto|2|6
+
+sqlite> UPDATE RBG_Info SET team_id=1, class_id=5 WHERE player_name="Blake";
+3|Blake|1|5
+
+sqlite> Select * from rbg_info, teams WHERE team_id = teams.id;
+1|Slipnslide|1|1|1|ABN
+2|Scott|1|4|1|ABN
+3|Blake|1|5|1|ABN
+4|Rachy|4|5|4|Dodgers
+5|Gengar|2|1|2|DON
+6|Jani|3|6|3|Jani
+7|Pluto|2|6|2|DON
+
+
+
+sqlite> SELECT RBG_info.name, teams.name, classes.name FROM RBG_info JOIN teams, classes
+ON player_name.team_id = teams.id, player_name.class_id = classes.id;
+
+
+sqlite> SELECT rbg_info.player_name, teams.name, classes.name
+   ...> FROM rbg_info
+   ...> JOIN teams, classes
+   ...>  ON rbg_info.team_id = teams.id and rbg_info.class_id = classes.id;
+Slipnslide|ABN|Warlock
+Scott|ABN|DH
+Blake|ABN|Priest
+Rachy|Dodgers|Priest
+Gengar|DON|Warlock
+Jani|Jani|Druid
+Pluto|DON|Druid
+sqlite>
+
+sqlite> DELETE FROM rbg_info
+   ...> WHERE player_name= "Pluto";
+sqlite> select * from rbg_info
+   ...> ;
+1|Slipnslide|1|1
+2|Scott|1|4
+3|Blake|1|5
+4|Rachy|4|5
+5|Gengar|2|1
+6|Jani|3|6
