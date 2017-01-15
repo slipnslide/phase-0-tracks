@@ -63,7 +63,7 @@ while answer != "done"
     #puts "The type of your appointment is #{type}."
     puts "When is this appointment? (Please use YYYY-MM-DD format)"
     date = gets.chomp
-    #puts "The date of the event is #{date}."
+    #puts "The date of your appointment is #{date}."
     happened = "false"
     create_appointment(db, name, type, date, happened)
     puts "You have a #{type} appointment on #{date}"
@@ -74,7 +74,7 @@ while answer != "done"
   puts "Would you like to create another appointment?? (If not type 'done')"
   answer = gets.chomp
 end
-
+#List Print of appointments
 puts "Do you want to print your list of appointments? (y/n)"
 if gets.chomp == "y"
   print_appointments = db.execute("SELECT appointments.appointment_name, appointments.type_of_appointment, appointments.date_of_appointment FROM appointments;")
@@ -82,7 +82,7 @@ if gets.chomp == "y"
     puts "#{appointment['appointment_name']} You have a #{appointment['type_of_appointment']} appointment on #{appointment['date_of_appointment']}."
   end
 end
-
+#Update Feature for appointments basic just takes off events that have been completed.
 puts "Do you need to update any appointments?? (y/n)"
 if gets.chomp == "y"
   puts "Which appointment did you want to update?"

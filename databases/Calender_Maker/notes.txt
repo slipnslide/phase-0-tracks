@@ -8,3 +8,5 @@
 # List every event in order based on date
 # Fancier Wording
 # Add more tables to allow for other things to be added to the calender just kinda grouped everything into one general category
+# Add a start date feature for things such as homework 
+# Add a feature to update projects not just remove them from the list
