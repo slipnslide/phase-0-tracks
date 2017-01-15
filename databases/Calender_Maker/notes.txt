@@ -5,4 +5,6 @@
 #Updates I would wanna improve upon....
 
 
-#
+# List every event in order based on date
+# Fancier Wording
+# Add more tables to allow for other things to be added to the calender just kinda grouped everything into one general category
