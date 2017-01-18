@@ -1,0 +1,2 @@
+[//]: # (The main design philosophy of the linux OS is that the person using it already knows what they are doing with a computer. Other operating systems such as MAC or Windows shield the user from the complexities of a computer.)
+[//]: # (a VPS is just a cloud based environment equivalent to a a real computer that runs it's own copy of an operating system that allows companies and people to host different applications or web pages without having to buy a physical system that can handle doing it. )
