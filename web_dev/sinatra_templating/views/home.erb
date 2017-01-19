@@ -7,10 +7,28 @@
   <h1>Student Management System</h1>
   <p>Welcome to the student management system.</p>
   <p>Click <a href="students/new">here</a> to create a new student.</p>
-  <ul>
-    <% @students.each do |student| %>
-      <li><%= student['name'] %>, <%= student['age'] %></li>
-    <% end %>
+  <p>Click <a href="gpa/new">here</a> to update student gpa.</p>
+  <table>
+    <tr>
+      <th>name</th>
+      <th>campus</th>
+      <th>age</th>
+      <th>gpa</th>
+    </tr>
+      <% @students.each do |student| %>
+    <tr>
+      <td><%=student['name']%></td>
+      <td><%=student['campus']%></td>
+      <td><%=student['age']%></td> 
+    <% end %> 
+    </tr>
+  </table> 
+  <ul> <% @gpa.each do |gpa| %>
+    <li><%=gpa['gpa']%></li>
+    <% end %> 
   </ul>
+
 </body>
 </html>
+
+
